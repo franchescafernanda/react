@@ -1,9 +1,40 @@
+import {Card, Button} from "react-bootstrap"
+import Tags from "./Tags"
+
 import Card from "./Card"
 
-const MyCard = () => {
+
+const MyCard = (props) => {
   
       return (
         <>
+        <div className="card">
+          <Card style = {{ whidth: '18rem'}}>
+            <Tags colorBg={props.colorBg} textBg ={props.props.textBg}/>
+            <Card.img variant="top" src={props.img}/>
+            <Card.Body>
+              <Card.Title>{props.name}</Card.Title>
+              <Card.Text>
+                {props.information}
+              </Card.Text>
+              <button variant={props.ColorButton}>{props.btn}</button>
+            </Card.Body>
+          </Card>
+        </div>
+        </>
+      )
+    }
+    
+    export default MyCard
+
+
+
+
+
+
+
+          {/* debo traspasarlo a Bootstrap
+          
           <Card
               img="https://images.pexels.com/photos/803766/pexels-photo-803766.jpeg?auto=compress&cs=tinysrgb&w=300"
               name="Bartolo"
@@ -27,9 +58,4 @@ const MyCard = () => {
               name="Princesa"
               information="Es una compañera leal y cariñosa que adora los mimos y los abrazos !Ayuda a Princesa a encontrar su final feliz¡"
               btn="Beagle"
-          />
-        </>
-      )
-    }
-    
-    export default MyCard
+          /> */}
