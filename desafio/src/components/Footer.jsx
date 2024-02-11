@@ -1,10 +1,12 @@
-const Footer = (props) => {
+import React from "react"
+
+const Footer = ({description}) => {
   
-    return (
-      <Footer>
-      {props.description}
-      </Footer>
-    )
-  }
-  
-  export default Footer
+  return (
+    <>
+    <p>{description}</p>
+    </>
+  )
+}
+
+export default Footer

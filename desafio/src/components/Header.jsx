@@ -1,11 +1,12 @@
-const Header = (props) => {
-    console.log(props)
-  
+import React from "react"
+
+const Header = ({titulo}) => {
+
       return (
-        <header>
-          {props.titulo}
-        </header>
+          <>
+            <h1>{titulo}</h1>
+          </>
       )
-    }
-    
-    export default Header
+  }
+      
+  export default Header

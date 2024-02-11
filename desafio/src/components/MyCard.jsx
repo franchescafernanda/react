@@ -1,23 +1,24 @@
-import {Card, Button} from "react-bootstrap"
-import Tags from "./Tags"
+import React from "react"
+import Card from "react-bootstrap/Card"
 
-import Card from "./Card"
+import Tags from "../components/Tags"
 
 
-const MyCard = (props) => {
+
+const MyCard = ({colorbadge,textobadge,img,name,information}) => {
   
       return (
         <>
         <div className="tarjet">
           <Card style = {{ whidth: '18rem'}}>
-            <Tags colorBg={props.colorBg} textBg ={props.props.textBg}/>
-            <Card.img variant="top" src={props.img}/>
+            <Tags colorbadge={colorbadge} textobadge ={textobadge}/>
+            <Card.Img variant="top" src={img}/>
             <Card.Body>
-              <Card.Title>{props.name}</Card.Title>
+              <Card.Title>{name}</Card.Title>
               <Card.Text>
-                {props.information}
+                {information}
               </Card.Text>
-              <button variant={props.ColorButton}>{props.btn}</button>
+              <Tags colorbadge={colorbadge} textobadge={textobadge}/>
             </Card.Body>
           </Card>
         </div>
@@ -26,3 +27,4 @@ const MyCard = (props) => {
     }
     
     export default MyCard
+
